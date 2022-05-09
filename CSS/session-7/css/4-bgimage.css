@@ -1,0 +1,19 @@
+* {
+  color: aliceblue;
+  margin: 0;
+}
+.bg {
+  background-image: url("../assets/images/tree.webp");
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  /* margin-top: 3rem; */
+}
+h1 {
+  position: relative;
+  top: 22px;
+}
+p {
+  margin-top: 40px;
+  font-size: 2rem;
+}
