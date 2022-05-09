@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DİSPLAY</title>
+    <style>
+      a {
+        display: block;
+        padding: 10px;
+        background-color: blue;
+      }
+      span {
+        background-color: orange;
+        padding: 40px;
+        display: block;
+        margin: 10px;
+        /* visibility: hidden;
+        display: none; */
+      }
+      .box {
+        background-color: teal;
+        /* width: 100px; */
+        /* height: 100px; */
+        border: 1px solid red;
+        text-align: center;
+        /* inline yaptığım için içe girdi, bunu istemediğim için inline block yaparım" */
+        display: inline;
+        margin-top: 2rem;
+        padding: 2rem;
+      }
+      .box1 {
+        background-color: teal;
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        text-align: center;
+        display: inline-block;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ---- inline elements--- -->
+    <a href="">Click here</a>
+    <button>Dont touch here</button>
+    <span>Something else</span>
+    <!-- ---- block elements ---- -->
+    <!-- div.box{BOX$}*3 -->
+    <div class="box">BOX1</div>
+    <div class="box">BOX2</div>
+    <div class="box">BOX3</div>
+    <br />
+    <div class="box1">BOX1</div>
+    <div class="box1">BOX2</div>
+    <div class="box1">BOX3</div>
+  </body>
+</html>

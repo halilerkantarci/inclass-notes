@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LİST</title>
+    <style>
+      .item {
+        list-style-type: none;
+        background-color: aqua;
+        list-style-position: inside;
+        /* list-style-image: url("./images/locaiton.png"); */
+      }
+      li:before {
+        /* Lİ NİN ÖNÜNDEKİ ELEMANA ÖZELLİK VERDİK */
+        content: "\263B";
+        color: black;
+        padding-right: 10px;
+      }
+      .item1 {
+        /* ctrl+p+>    diyerek emoji bulabilirsin*/
+        list-style-type: "🕸️";
+        font-size: 22px;
+      }
+      .item2 {
+        /* unicode character table sitesinden bulabilirsin */
+        list-style-type: "\1F312";
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li class="item item1">list1</li>
+      <li class="item item2">list2</li>
+      <li class="item item3">list3</li>
+      <li class="item item4">list4</li>
+    </ul>
+  </body>
+</html>
