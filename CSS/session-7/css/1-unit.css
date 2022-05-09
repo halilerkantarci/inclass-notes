@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+}
+body {
+  height: 100vh;
+  /* % ⇒ parent elemente göre % verilir. Responsive tasarımın temelleridir. Bazen % sel almaz bunun sebebi parentin width değeri yoktur. Body'nin default bir height değeri yoktur. body'e yüzdesel atanamaz. */
+}
+.abs {
+  background-color: aqua;
+  width: 100px;
+}
+.div2 {
+  background-color: rebeccapurple;
+  width: 50%;
+  height: 50%;
+}
+.div3 {
+  background-color: aqua;
+  /* parent olan containera göre oranlar */
+  width: 50%;
+  height: 42%;
+}
+/*! viewport ölçü birimleri parent'ın büyüklüğü ile ilgili değildir. Sadece tarayıcının görülebilir alanına göre oranlama yapar.  */
+.div4 {
+  background-color: bisque;
+  /* vw de görelilik tarayıcıya göredir */
+  width: 80vw;
+  height: 16vh;
+}
+
+.div5 {
+  font-size: 1em; /* 16 px */
+}
+.div6 {
+  font-size: 2em; /* 32 px */
+}
+.div7 {
+  font-size: 0.5em; /* 3rem=96 px */
+}
+.div8 {
+  font-size: 4rem;
+}
+.div9 {
+  font-size: 3rem;
+}
