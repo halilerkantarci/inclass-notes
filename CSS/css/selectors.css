@@ -1,0 +1,71 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+nav ul li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+nav.menu .list {
+  /* padding sola yasladı. fakat emojiler dışarıda kaldı. İçeri almak için list-style-position: kullandık */
+  list-style-type: "🥇"; /* windows+. ile emoji ekledik */
+  list-style-position: inside;
+  padding: 0;
+}
+nav.menu {
+  background-color: gray;
+  width: 180px;
+}
+/* nav.menu .list li.aktif {
+  background-color: black;
+} */
+nav.menu ul.list li:first-child,
+li:nth-child(odd) {
+  background-color: black;
+}
+nav.menu ul.list li {
+  padding: 8px 20px;
+}
+nav.menu ul li:hover a {
+  /* li hover olduğunda a yı değiştir */
+
+  color: black;
+}
+nav.menu ul li:hover {
+  background-color: aliceblue;
+}
+nav.menu .list .aktif:hover {
+  /*todo ana sayfanın bg si değişmediği için bu yöntemi yaptık */
+  background-color: aliceblue;
+}
+nav.menu .list li:last-child::after {
+  content: "🎈";
+
+  margin-left: 10px;
+}
+nav.menu .list li:first-child::before {
+  content: "🏆";
+}
+nav.menu ul.list li:first-child {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: green;
+  content: "\f410";
+}
+/* ! kutu class'ı içindeki tüm p leri seçer */
+.kutu p {
+  color: green;
+  font-weight: bold;
+  font-size: larger;
+}
+/* ! parentı kutu olan tüm p elementleri seçer */
+.kutu > p {
+  color: palevioletred;
+}
+
+/*todo son div elementi kapandıktan sonraki ilk p elementleri seçer */
+.sondiv + p {
+  color: blue;
+}
+
+/*todo son divden sonraki tüm p elemenlerini seçer
+.sondiv ~ p {} */
