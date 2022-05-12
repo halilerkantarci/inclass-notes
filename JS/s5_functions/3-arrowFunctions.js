@@ -12,3 +12,16 @@ const menu = () => {
   console.log("======================");
 };
 menu();
+
+//************* ÖRNEK 2 */
+//********************************* */
+// const a = prompt("bir sayi gir");
+// const tekMi = (b) => (b % 2 ? "tek" : "çift");
+// console.log(tekMi(a));
+
+//************ ÖRNEK3 */
+//********************* */
+const r = prompt("yarıçapı giriniz");
+const h = prompt("yükseklik giriniz");
+const hacimHesapla = (r, h) => Math.PI * r * r * h;
+console.log("Silindirin Hacmi:", hacimHesapla(r, h).toFixed(3));
