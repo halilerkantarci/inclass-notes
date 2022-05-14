@@ -36,3 +36,38 @@
   /*! her iki eksende de 1.2 büyür */
   transform: scale(1.2);
 }
+
+/**************** TRANSLATE *************** */
+.translate {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50vw;
+  height: 10vw;
+  margin: 10px auto;
+  color: aliceblue;
+}
+.x {
+  background-color: blue;
+}
+.x:hover {
+  /* kutu şeklinde sağa doğru 50px kayar */
+  transform: translateX(50px);
+  transition-duration: 3s;
+  transition-delay: 0.5s;
+}
+.y {
+  background-color: slateblue;
+  /* bg yi değiştirecek olursan 1s sonra değiştir */
+  transition: background-color 0.5s;
+}
+.y:hover {
+  transform: translateY(10px);
+  transition-duration: 3s;
+  background-color: black;
+}
+.xy {
+  background-color: seagreen;
+}
+.xy:hover {
+  transform: translate(50px, 50px);
+}
