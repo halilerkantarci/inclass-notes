@@ -39,7 +39,6 @@
   justify-content: center;
   width: 5rem;
   height: 5rem;
-  gap: 1rem 2rem;
 
   background-color: lightskyblue;
 }
@@ -72,6 +71,7 @@ ul li {
   background-color: mediumspringgreen;
   display: flex;
   justify-content: center;
+  text-align: center;
   flex-wrap: nowrap;
 }
 .container3 div {
@@ -81,5 +81,39 @@ ul li {
   flex-grow: 1;
 }
 div.grow2 {
-  flex-grow: 2;
+  /* enini büyütüyor */
+  flex-grow: 4;
+}
+div.grow3 {
+  flex-grow: 7;
+}
+div.nogrow {
+  /* değişiklik yapma diyoruz.büyüme diyoruz */
+  flex-grow: 0;
+}
+
+.container4 {
+  background-color: mediumpurple;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: nowrap;
+  margin: 20px 0;
+  gap: 1rem 2rem;
+}
+.container4 div {
+  background-color: lightpink;
+  width: 5rem;
+}
+div.div1 {
+  width: 10%;
+}
+div.div2 {
+  width: 20%;
+}
+div.div3 {
+  width: 30%;
+}
+div.div4 {
+  width: 40%;
 }
