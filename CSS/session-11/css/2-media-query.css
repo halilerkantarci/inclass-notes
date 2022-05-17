@@ -1,4 +1,26 @@
+@import "theme.css";
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: var(--ff-monteserrat);
+  font-weight: 500;
+}
+body {
+  background-color: var(--mavi-9);
+  color: var(--siyah);
+  margin: 1rem;
+}
+h1 {
+  background-color: var(--koyu-kırmızı);
+  width: 20rem;
+  padding: 0.3rem;
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: center;
+  margin: 2rem auto;
+}
+.header {
+  background-color: var(--koyu-yeşil);
+  padding: 1rem;
+  font-size: 2rem;
 }
