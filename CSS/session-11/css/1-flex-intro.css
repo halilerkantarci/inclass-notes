@@ -5,11 +5,13 @@
   flex-direction: row;
 
   /*? sıkıştırma veya alt satıra geçebilme:flex-wrap: wrap, nowrap, wrap-reverse*/
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 
   /*! Yatay Hizalama: Justify-center
     /** flex-start, flex-end,center, space-around,space-evenly, space-between*/
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px 10px; /* satırlar arası boşluk,sütunlar arası boşluk */
 }
 
 .container div {
@@ -17,4 +19,67 @@
   height: 5rem;
   background-color: violet;
   margin: 1rem;
+}
+
+.container1 {
+  margin-top: 20px;
+  height: 12rem;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 10px 20px;
+}
+.container1 div {
+  /* flexi yazıyı hizalamak için yazdım */
+  /** bir child element stretch ile container'ın sınırlarına dayandığında child'in içerisindeki içeriği (Örn yazı) yine dikey olarak ortaya hizalamak için nested flex yapısı kullanılabilir*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  gap: 1rem 2rem;
+
+  background-color: lightskyblue;
+}
+
+ul {
+  height: 20rem;
+  background-color: rgb(255, 255, 0);
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  /* taşma olursa taşmayı engeller */
+  overflow: auto;
+
+  /* align-items: flex-end; */
+  /*!Çok satırlı verilerin dikeyde hizalama için kullanılır.*/
+  align-content: flex-end;
+}
+ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: mediumorchid;
+  width: 4rem;
+  height: 4rem;
+}
+
+.container3 {
+  background-color: mediumspringgreen;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.container3 div {
+  background-color: mediumvioletred;
+  width: 5rem;
+  margin: 1rem;
+  flex-grow: 1;
+}
+div.grow2 {
+  flex-grow: 2;
 }
