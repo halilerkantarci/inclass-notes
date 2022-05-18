@@ -97,8 +97,11 @@ col {
     width: 100%;
     margin: 0.5rem 0;
   }
-  .navbar a:hover {
+  .navbar a {
     width: 100%;
+    text-align: center;
+  }
+  .navbar a:hover {
     text-align: center;
   }
 }
