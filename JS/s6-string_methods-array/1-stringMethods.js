@@ -26,9 +26,17 @@ console.log(str8);
 //* Sonrasında oluşan bu object bellekten otomatik olarak kaldırılır.
 
 //* --------------------------------
-//* charAt() - immutable
+//* charAt() -
 //* --------------------------------
 console.log(str8.charAt()); //! 0. indekste bulunan charı getirir
 console.log(str8.charAt(4));
 console.log(str8.charAt(str8.length - 1));
 // console.log(str8.indexOf("a"));
+
+//* --------------------------------
+//* includes() - case sentive
+//* --------------------------------
+const word = "To be or not to be, that is the question";
+console.log(word.includes("to be")); //! true
+console.log(word.includes("That")); //! false
+console.log(word.includes("")); //! true  (empty string)
