@@ -68,3 +68,33 @@ col {
   width: 15%;
   background-color: var(--gri-8);
 }
+@media screen and (max-width: 992px) {
+  body {
+    background-color: var(--açık-kırmızı);
+    color: var(--beyaz);
+  }
+  .col {
+    width: 50%;
+    margin-top: 1rem;
+  }
+  /* .row {
+    gap: 1rem 0;
+  } */
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: var(--mor-1);
+    color: var(--beyaz);
+  }
+  .header {
+    display: none;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .col {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
