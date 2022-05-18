@@ -4,5 +4,34 @@
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 20vh) 5vh 5vh;
+  grid-template-rows: repeat(4, 20vh) 15vh 5vh;
+  row-gap: 5px;
+  column-gap: 5px;
+  /*? itemları yatayda hizalamak için */
+  /* justify-items: center; */
+  /*? itemları dikeyde hizalamak için */
+  /* align-items: center; */
+}
+.content {
+  background-color: lightskyblue;
+  border: 2px solid blue;
+}
+.content1 {
+  grid-column-start: 1;
+  grid-column-end: 3; /* dahil değil */
+  background-color: lightslategrey;
+}
+.content4 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: lightyellow;
+}
+.content6 {
+  /* grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4; */
+  /*! row_start/col_start/row_end/col_end */
+  grid-area: 2 / 3 / 4 / 5;
+  background-color: lightpink;
 }
