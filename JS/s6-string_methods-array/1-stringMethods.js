@@ -31,7 +31,6 @@ console.log(str8);
 console.log(str8.charAt()); //! 0. indekste bulunan charı getirir
 console.log(str8.charAt(4));
 console.log(str8.charAt(str8.length - 1));
-// console.log(str8.indexOf("a"));
 
 //* --------------------------------
 //* includes() - case sentive
@@ -40,3 +39,13 @@ const word = "To be or not to be, that is the question";
 console.log(word.includes("to be")); //! true
 console.log(word.includes("That")); //! false
 console.log(word.includes("")); //! true  (empty string)
+console.log(word.includes("to be", 13)); //! 13. indeksten sonra "to be" var mı?
+console.log(word.includes("to be", 14));
+
+//* --------------------------------
+//* indexOf(),lastIndexof() - case sentive
+//* --------------------------------
+const tobeIndex = word.indexOf("or");
+console.log(tobeIndex);
+console.log(word.indexOf("be")); //! ilk gördüğü be
+console.log(word.lastIndexOf("be")); //! son gördüğü be
