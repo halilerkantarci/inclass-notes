@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 200px 10vh calc(100vh - (200px + 20vh)) 10vh;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+header {
+  grid-column: span 12;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://cdn.pixabay.com/photo/2018/07/18/13/05/ecommerce-3546296__340.jpg");
+}
+nav {
+  grid-column: span 12;
+  background-color: lightblue;
+}
+aside {
+  grid-column: span 3;
+  background-color: lightcoral;
+}
+main {
+  grid-column: span 9;
+  background-color: lightcyan;
+}
+footer {
+  grid-column: span 12;
+  background-color: lightgoldenrodyellow;
+}
