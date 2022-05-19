@@ -74,3 +74,25 @@ console.log(oku.replace(/SAF/i, "Aptal")); //! case sensitive özelliğini kald�
 //* --------------------------------
 
 const veysel = "Uzun ince bir yoldayım gidiyorum gündüz gece..";
+const sliced = veysel.slice(33); //! 33. indeksten sonuna kadar git
+console.log(sliced);
+console.log(veysel.slice(14, 32));
+console.log(veysel.substring(14, 32)); //! negatif index kullanılmaz
+
+//* --------------------------------
+//* split()
+//* --------------------------------
+const tarkan = "Gel gündüzle gece olalım";
+console.log(tarkan.split(""));
+console.log(tarkan.split(" "));
+
+const copyTarkan = tarkan.split();
+console.log(copyTarkan); //! stringi array haline getirdi
+//* --------------------------------
+//* trim()
+//* --------------------------------
+const ramazan = "    Hoş geldin ya şehri ramazan        ";
+console.log(ramazan);
+console.log(ramazan.trim()); //! bütün boşluklar kalktı
+console.log(ramazan.trimStart()); //! başlangıçtaki boşlukları kaldırdı
+console.log(ramazan.trimEnd()); //! sondaki boşlukları kaldırdı
