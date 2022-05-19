@@ -33,7 +33,7 @@ console.log(str8.charAt(4));
 console.log(str8.charAt(str8.length - 1));
 
 //* --------------------------------
-//* includes() - case sentive
+//* includes() - case sensitive
 //* --------------------------------
 const word = "To be or not to be, that is the question";
 console.log(word.includes("to be")); //! true
@@ -43,9 +43,34 @@ console.log(word.includes("to be", 13)); //! 13. indeksten sonra "to be" var mı
 console.log(word.includes("to be", 14));
 
 //* --------------------------------
-//* indexOf(),lastIndexof() - case sentive
+//* indexOf(),lastIndexof() - case sensitive
 //* --------------------------------
 const tobeIndex = word.indexOf("or");
 console.log(tobeIndex);
 console.log(word.indexOf("be")); //! ilk gördüğü be
 console.log(word.lastIndexOf("be")); //! son gördüğü be
+
+//* --------------------------------
+//* startsWith(), endsWith() - case sensitive
+//* --------------------------------
+const word2 = "Salına salına sinsice";
+console.log(word2.startsWith("sa")); //! false,küçük harf old. için
+console.log(word2.startsWith("Sa"));
+console.log(word2.startsWith("sa", 7)); //! 7. indeksten sonra sa var mı?
+console.log(word2.endsWith("sice"));
+
+//* --------------------------------
+//* replace(searchfor,replacewith)
+//* --------------------------------
+const oku = "Oku Baban gibi,saf olma";
+console.log(oku.replace("saf", "eşek"));
+console.log(oku); //! gerçek halini değiştirmiyor
+
+//* REGEX,DEĞİŞTİRME YOLLARI;
+console.log(oku.replace(/SAF/i, "Aptal")); //! case sensitive özelliğini kaldırdık
+
+//* --------------------------------
+//* slice,substring,substr
+//* --------------------------------
+
+const veysel = "Uzun ince bir yoldayım gidiyorum gündüz gece..";
