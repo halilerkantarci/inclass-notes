@@ -19,3 +19,10 @@ console.log(number);
 
 const sayilar = new Array(10);
 console.log(sayilar); //! 10 elemanlık boş bir array oluşturur
+
+//* DİZİDEN VERİ OKUMA-YAZMA
+//* ----------------------------------------------------
+const java = diller[1];
+console.log(java);
+diller[3] = "JavaScript"; //! const ile tanımlamama rağmen değişti
+console.log(diller);
