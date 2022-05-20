@@ -74,6 +74,8 @@ console.log(meyveler.sort()); //? harf sırasına dizdi
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.splice(2, 0, "Lemon", "Kiwi"); //The first parameter (2) defines the position where new elements should be added (spliced in).The second parameter (0) defines how many elements should be removed.
 console.log(fruits);
-
+const new2 = fruits.splice(3, 1, "Erik"); //3.indeks yerine 1 elemanı silerek erik ekle
+console.log(fruits);
 const citrus = fruits.slice(3); // [ 'Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango' ] --> [ 'Kiwi', 'Apple', 'Mango' ] 3. indeksten sonrasını slice ediyor
+
 console.log(citrus);
