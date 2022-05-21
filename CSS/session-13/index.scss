@@ -11,7 +11,7 @@ $fontSize: 1.2rem;
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $navBgColor: #30a7c3;
 $myBorder: 2px solid rgb(13, 55, 117);
-$myLinkSize: 19px;
+$myLinkSize: 1.1rem;
 $bannerBgColor: #cc6699;
 
 body {
@@ -21,6 +21,7 @@ body {
   font-size: $fontSize;
 }
 
+//* ========== HEADER =============
 header {
   background-color: $navBgColor;
   display: flex;
@@ -50,5 +51,35 @@ header {
         text-decoration: underline;
       }
     }
+  }
+}
+
+//* ========== BANNER =============
+main {
+  .banner {
+    background-color: $bannerBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    line-height: 2rem;
+  }
+  button {
+    padding: 0.5rem;
+    background-color: $navBgColor;
+    border: none;
+    border-radius: 10px;
+    font-size: $myLinkSize;
+    width: 9rem;
+    margin: 2rem 0.5rem 0.1rem 0.5rem;
+    &:hover {
+      background-color: $bgColor;
+      cursor: pointer;
+    }
+  }
+  img {
+    width: 100px;
+    min-width: 300px;
+    max-width: 400px;
   }
 }
