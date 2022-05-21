@@ -110,6 +110,10 @@ main {
   }
   .card2 {
     @include myBox(rgb(42, 165, 48), black);
+    background-image: url("https://cdn.pixabay.com/photo/2020/07/28/11/43/circles-5444818__340.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .card3 {
     @include myBox(rgb(50, 42, 165), red);
@@ -120,6 +124,10 @@ main {
   }
   .card4 {
     @include myBox(rgb(165, 42, 124), white);
+    background-image: url("https://cdn.pixabay.com/photo/2022/04/15/18/32/cat-7134998__340.jpg");
+    background-position: center right;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -144,16 +152,36 @@ main {
 
 //* **********  FOOTER ******/
 //! **********  FOR LOOP ******/
+$textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
 
 .footer {
   .socialIcons {
     display: flex;
+    height: 8rem;
+    //? 5 dersek dahil etmez, o yüzden  dedik
     @for $i from 1 to 6 {
       .social#{$i} {
         width: 25%;
         height: 100%;
-        background-color: lighten($color: #08094e, $amount: $i * 12);
+        // background-color: lighten($color: #08094e, $amount:
+        //  $i * 12);
+        background-color: darken($color: #5e60b8, $amount: $i * 5);
+        color: nth($textColor, $i);
+        font-size: $i * 1rem;
       }
     }
+  }
+}
+
+$dark: 1;
+//! IF ELSE *********************
+.footer {
+  @if $dark == 3 {
+    background-color: wheat;
+    color: black;
+  } @else if $dark == 2 {
+    background-color: gray;
+  } @else {
+    background-color: yellow;
   }
 }

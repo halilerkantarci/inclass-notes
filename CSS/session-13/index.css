@@ -98,6 +98,10 @@ main img {
   border: 2px solid rgb(13, 55, 117);
   border-radius: 5px;
   margin: 0.5rem;
+  background-image: url("https://cdn.pixabay.com/photo/2020/07/28/11/43/circles-5444818__340.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .cards .card3 {
   background-color: rgb(50, 42, 165);
@@ -126,6 +130,10 @@ main img {
   border: 2px solid rgb(13, 55, 117);
   border-radius: 5px;
   margin: 0.5rem;
+  background-image: url("https://cdn.pixabay.com/photo/2022/04/15/18/32/cat-7134998__340.jpg");
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .articles {
@@ -147,31 +155,46 @@ main img {
 
 .footer .socialIcons {
   display: flex;
+  height: 8rem;
 }
 .footer .socialIcons .social1 {
   width: 25%;
   height: 100%;
-  background-color: #0e0f86;
+  background-color: #4d4faf;
+  color: #990000;
+  font-size: 1rem;
 }
 .footer .socialIcons .social2 {
   width: 25%;
   height: 100%;
-  background-color: #1316bd;
+  background-color: #45479e;
+  color: #55004e;
+  font-size: 2rem;
 }
 .footer .socialIcons .social3 {
   width: 25%;
   height: 100%;
-  background-color: #2528e9;
+  background-color: #3e3f8c;
+  color: #0fa8a1;
+  font-size: 3rem;
 }
 .footer .socialIcons .social4 {
   width: 25%;
   height: 100%;
-  background-color: #5c5fee;
+  background-color: #36377a;
+  color: #121456;
+  font-size: 4rem;
 }
 .footer .socialIcons .social5 {
   width: 25%;
   height: 100%;
-  background-color: #9495f4;
+  background-color: #2e2f68;
+  color: #64c217;
+  font-size: 5rem;
+}
+
+.footer {
+  background-color: yellow;
 }
 
 /*# sourceMappingURL=index.css.map */
