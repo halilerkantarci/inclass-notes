@@ -10,11 +10,45 @@ $fontColor: white;
 $fontSize: 1.2rem;
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $navBgColor: #30a7c3;
-$myBorder: 2px solid rgb(175, 29, 29);
+$myBorder: 2px solid rgb(13, 55, 117);
 $myLinkSize: 19px;
 $bannerBgColor: #cc6699;
 
 body {
   font-family: $fontFamily;
   background-color: $bgColor;
+  color: $fontColor;
+  font-size: $fontSize;
+}
+
+header {
+  background-color: $navBgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+
+  img {
+    width: 80px;
+    border: $myBorder;
+    border-radius: 10px;
+    padding: 0.2rem;
+  }
+  nav {
+    a {
+      color: $fontColor;
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+    ul {
+      list-style-type: none;
+    }
+    li {
+      //! içinde bulunduğumuz elementi refere etmek için & işareti kullanılır
+      display: inline-block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
