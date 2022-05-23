@@ -104,3 +104,58 @@ console.log(fiyatlar);
 
 //*-------------- ÖDEV -------------------
 //* fiyatlar dizisinde her bir fiyata %10 zam yapalım.
+
+//* ======================================================
+//*                  MAP METHOD
+//* ======================================================
+
+//* isimler dizisinin içerisindeki her ismi büyük harf olarak yeni bir diziye sakla
+const isimler = [
+  "ahmet",
+  "mehmet",
+  "ismet",
+  "saffet",
+  "can",
+  "canan",
+  "cavidan",
+];
+
+let x = isimler.map((a) => a.toUpperCase());
+console.log(x);
+console.log(isimler);
+
+// ÖRNEK: tlFiyatlar dizidekisindeki ürünlere zam yapılmak isteniyor.
+// Fiyatı 100 TL den fazla olanlara %10 zam, 100 TL den az olanlara ise
+// %15 zam yapılmak isteniyor. Ayrıca, zamlı olan yeni değerleri örnekteki
+// gibi diziye saklamak istiyoruz.
+const tlFiyatlar = [100, 150, 100, 50, 80];
+const degerler = tlFiyatlar.map((a, b) =>
+  a > 100
+    ? `${b + 1}. ürünün fiyatı : ${(a * 1.1).toFixed(2)}`
+    : `${b + 1}. ürünün fiyatı : ${(a * 1.15).toFixed(2)}`
+);
+console.log(degerler);
+
+//* ======================================================
+//*                  CHAINING (PIPELINE)
+//* ======================================================
+//! tüm isimleri büyük harfe çevirip konsolda yazdır
+//* ÇEVİR VEYA DEĞİŞTİR DERSE MAP KULLAN
+isimler
+  .map((isim) => isim.toUpperCase())
+  .forEach((name1) => console.log(name1));
+
+//! ÖRNEK
+//? ismi ahmet olanları al,harflerini büyük yap,yazdır
+isimler
+  .filter((x) => x === "ahmet" || x === "mehmet") //["ahmet","mehmet"]
+  .map((x) => x.toUpperCase())
+  .forEach((x) => console.log(x));
+
+//* ======================================================
+//*                  FİLTER
+//* ======================================================
+//!ÖRNEK: fiyatlar arrayinde fiyatı 250 tl den az olanları ayri bir diziye sakla
+
+const kucuk250 = fiyatlar.filter((x) => x < 250);
+console.log(kucuk250);
