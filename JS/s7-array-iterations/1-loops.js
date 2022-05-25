@@ -102,9 +102,6 @@ fiyatlar.forEach((value, indis, dizi) => {
 });
 console.log(fiyatlar);
 
-//*-------------- ÖDEV -------------------
-//* fiyatlar dizisinde her bir fiyata %10 zam yapalım.
-
 //* ======================================================
 //*                  MAP METHOD
 //* ======================================================
@@ -159,3 +156,32 @@ isimler
 
 const kucuk250 = fiyatlar.filter((x) => x < 250);
 console.log(kucuk250);
+
+//*-------------- ÖDEV -------------------
+const fiyatlar1 = [100, 250, 50, 89];
+//***ödev fiyatlara %10 zam yapılsın:**///
+//! fiyatlar1.forEach(
+//   (value, index, arr) => (arr[index] = (value * 1.1).toFixed(2))
+// );
+// console.log(fiyatlar1);
+//* fiyatlar dizisindeki fiyatı 90'dan büyük olan değerleri
+//* konsola tek tek bastırınız.
+
+//* fiyatlar dizisindeki fiyatı 110'dan küçük olan değerlere
+//*  %10 artış yapın ve bu değerleri konsola tek tek bastırınız.
+
+let fiyatDusuk = fiyatlar1
+  .filter((a) => a < 110)
+  .forEach((a) => console.log((a * 1.1).toFixed(2)));
+console.log(fiyatDusuk);
+
+//* maaslar 4000'den düsük olanlara %50 zam yapmak istiyoruz
+//* ve bunu ayri dizi olarak saklamak istiyoruz.
+const maaslar = [3000, 5000, 4000, 6000, 6500];
+const dusuk = maaslar.filter((x) => x < 4000).map((y) => y * 1.5);
+console.log(dusuk);
+
+//* Maasi 4000 'den büyük olanlara %25 zam yaparak sonuçlari yazdiralim.
+
+const buyuk = maaslar.filter((a) => a > 4000).map((a) => a * 1.25);
+console.log(buyuk);
