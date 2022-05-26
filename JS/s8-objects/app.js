@@ -77,4 +77,9 @@ const kisi = {
   },
 };
 console.log("Yaş:", kisi.yasHesapla());
-console.log(kisi.ozet());
+console.log("Bilgi", kisi.ozet());
+//! NOT: arrow fonksiyonları farklı amaç için geliştirilmiş fonksiyonlarıdır
+//! ve lexical context'e sahiptirler. Dolayısıyla, bir arrow fonk. içerisinde
+//! this kelimesi kullanılrsak beklenmeyen sonuclar alabiliriz.
+//! Çünkü, arrow içerisindeki this kelimesi global scope'u gösterir. (window nesnesini) gösterir.
+//! Bunu engellemek için object fonskyionlarını tanımlamak için normal fonksiyon  yöntemlerini kullanmak gerekir.
