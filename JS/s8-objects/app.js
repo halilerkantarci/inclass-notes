@@ -158,3 +158,22 @@ console.log(yaslar);
 
 //* Ornek3: name ve surname'leri birlestirip buyuk harfe ceviren ve bunu name key'i olarak saklayan, aynı zamanda age degerlerini 5
 //* arttırarak age key'ine saklayan ve oluşan diziyi döndüren kodu yazınız.
+const kisilerFullIsim = kisiler.map((kisi) => ({
+  fullname: kisi.name.toUpperCase() + " " + kisi.surname.toUpperCase(),
+  age: kisi.age + 5,
+}));
+console.log(kisilerFullIsim);
+
+//* Örnek-4: Yasi(age) 33'ten kücük olan kisilerin adlarini (name) listeleyiniz.
+const kucuk33 = kisiler.filter((a) => (a < 33 ? kisiler.name : null));
+console.log(kucuk33);
+
+//* Ornek5: 33 yasindan kücüklerin isimlerini diziye saklayiniz.
+
+//* Ornek6: Meslegi developer olanlarin isim ve yaslarini yeni bir Obje olarak
+//* yeni diziye saklayiniz.
+
+//* Ornek7: kisilerin ortalama yasini hesaplayiniz.
+
+const ortYas = kisiler.reduce((t, kisi) => t + kisi.age, 0) / kisiler.length;
+console.log(ortYas);
