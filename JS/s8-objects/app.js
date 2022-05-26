@@ -83,3 +83,78 @@ console.log("Bilgi", kisi.ozet());
 //! this kelimesi kullanılrsak beklenmeyen sonuclar alabiliriz.
 //! Çünkü, arrow içerisindeki this kelimesi global scope'u gösterir. (window nesnesini) gösterir.
 //! Bunu engellemek için object fonskyionlarını tanımlamak için normal fonksiyon  yöntemlerini kullanmak gerekir.
+
+//* ======================================
+//*               OBJECT ITERATION
+//* ======================================
+
+//! NESTED OBJECTS
+const kisilerObject = {
+  halil: {
+    ad: "halil",
+    soyad: "erkantarci",
+    yas: 24,
+    meslek: "full stack developer",
+    diller: ["c", "c++", "phyton", "js"],
+    maas: "4000ZLT",
+  },
+  mehmet: {
+    ad: "mehmet",
+    soyad: "yılmaz",
+    yas: 30,
+    meslek: "full stack developer",
+    diller: ["c", "c++", "phyton", "js"],
+    maas: 20000,
+  },
+};
+console.log(kisilerObject.mehmet);
+console.log(kisilerObject.mehmet.maas);
+
+//! JSON(JAVASCRİPT OBJECT NOTATİON)
+
+const kisiler = [
+  {
+    name: "Ahmet",
+    surname: "Can",
+    job: "developer",
+    age: 30,
+  },
+  {
+    name: "Mehmet",
+    surname: "Baki",
+    job: "tester",
+    age: 35,
+  },
+  {
+    name: "Nur",
+    surname: "Ersan",
+    job: "team lead",
+    age: 40,
+  },
+  {
+    name: "Merve",
+    surname: "Veli",
+    job: "developer",
+    age: 26,
+  },
+
+  {
+    name: "Ruzgar",
+    surname: "Kuzey",
+    job: "tester",
+    age: 24,
+  },
+];
+
+console.log(kisiler);
+console.log(kisiler[4]);
+
+//* ORNEK 1 : KİSİLER DİZİSİNDEKİ JOBLARI TEK TEK YAZDIR
+kisiler.forEach((kisi) => console.log(kisi.job));
+
+//* ORNEK 2 : YASLARİ 1 ARTİRARAK YENİ BİR DİZİYE SAKLAYİNİZ
+const yaslar = kisiler.map((kisi) => (kisi.age += 1));
+console.log(yaslar);
+
+//* Ornek3: name ve surname'leri birlestirip buyuk harfe ceviren ve bunu name key'i olarak saklayan, aynı zamanda age degerlerini 5
+//* arttırarak age key'ine saklayan ve oluşan diziyi döndüren kodu yazınız.
