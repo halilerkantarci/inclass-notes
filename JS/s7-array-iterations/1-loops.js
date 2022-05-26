@@ -185,3 +185,10 @@ console.log(dusuk);
 
 const buyuk = maaslar.filter((a) => a > 4000).map((a) => a * 1.25);
 console.log(buyuk);
+
+//* ===================================================
+//*                        REDUCE
+//* ===================================================
+const maaslar1 = [3000, 5000, 4000, 6000, 6500];
+const toplam12 = maaslar.reduce((t, m) => t + m, 0);
+console.log(toplam12);
