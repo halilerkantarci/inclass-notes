@@ -26,3 +26,55 @@ console.log(ahmet, canan);
 console.log(canan.perMaas);
 console.log(ahmet.perAdi);
 console.log(this); //! window objesine bağlanmıştır
+
+//* ---------------------------------------------------------
+//* 3- object literal ( en çok tercih edilen yöntem)
+//* ---------------------------------------------------------
+
+const calisan = {
+  ad: "halil",
+  soyad: "erkantarci",
+  yas: 24,
+  meslek: "full stack developer",
+  diller: ["c", "c++", "phyton", "js"],
+  maas: "4000ZLT",
+};
+console.log(calisan);
+calisan.nationality = "turkey";
+console.log(calisan);
+console.log(calisan.diller);
+console.log(calisan.diller[3]);
+
+//* bu şekilde orijinal dizi de değişir
+const isci = calisan;
+isci.maas = 5000;
+console.log(isci);
+console.log(calisan);
+// Object Literal
+const labor = {
+  name: { firstName: "Ahmet", secondName: "Murat" },
+  surname: "Yilmaz",
+  age: "30",
+  softlangs: ["Python", "C++", "JS", `Ruby`, `Swift`, "Unity"],
+};
+console.log(labor.name.secondName, labor.softlangs[2]);
+
+//* ======================================
+//*               OBJECT METOTLAR
+//* ======================================
+
+const kisi = {
+  ad: "can",
+  soyad: "canan",
+  dogum: 1998,
+  meslek: "developer",
+  ehliyet: true,
+  yasHesapla: function () {
+    return new Date().getFullYear() - this.dogum;
+  },
+  ozet: function () {
+    return `${this.ad} ${this.yasHesapla()} yasindadir `;
+  },
+};
+console.log("Yaş:", kisi.yasHesapla());
+console.log(kisi.ozet());
