@@ -192,3 +192,5 @@ console.log(buyuk);
 const maaslar1 = [3000, 5000, 4000, 6000, 6500];
 const toplam12 = maaslar.reduce((t, m) => t + m, 0);
 console.log(toplam12);
+
+//* maasi ortalamanin altinda olanlara %20 zam yapalim
