@@ -44,7 +44,8 @@ calisan.nationality = "turkey";
 console.log(calisan);
 console.log(calisan.diller);
 console.log(calisan.diller[3]);
-
+console.log(calisan.diller.push("kotlin"));
+console.log(calisan.diller);
 //* bu şekilde orijinal dizi de değişir
 const isci = calisan;
 isci.maas = 5000;
@@ -69,14 +70,14 @@ const kisi = {
   dogum: 1998,
   meslek: "developer",
   ehliyet: true,
-  yasHesapla: function () {
+  myfunction: function () {
     return new Date().getFullYear() - this.dogum;
   },
   ozet: function () {
-    return `${this.ad} ${this.yasHesapla()} yasindadir `;
+    return `${this.ad} ${this.myfunction()} yasindadir `;
   },
 };
-console.log("Yaş:", kisi.yasHesapla());
+console.log("Yaş:", kisi.myfunction());
 console.log("Bilgi", kisi.ozet());
 //! NOT: arrow fonksiyonları farklı amaç için geliştirilmiş fonksiyonlarıdır
 //! ve lexical context'e sahiptirler. Dolayısıyla, bir arrow fonk. içerisinde
