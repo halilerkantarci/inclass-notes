@@ -13,6 +13,7 @@ console.log(car.model);
 
 //* 2. YÖNTEM : DESTRUCTIRING
 const { name, model } = car;
+console.log({ name, model });
 console.log(name, model);
 
 //* EXAMPLE: NESTED
@@ -113,15 +114,15 @@ const personel = {
   job: "dev",
   age: 30,
 };
-const { pName, job, ...surnameAge } = personel;
-console.log(pName, job, surnameAge);
+const { pName, job, ...rest } = personel;
+console.log(pName, job, rest);
 
 //* Rest ( Function Arguments )
 const topla = (x, y) => {
   return x + y;
 };
 
-//? hata vermez ama fakat sadece 2 argümanı toplar
+//? hata vermez ama sadece 2 argümanı toplar
 console.log(topla(1, 2, 3, 4, 5, 6));
 
 //! BÜTÜN SAYILARI TOPLATMAK İSTERSEK;
