@@ -1,0 +1,11 @@
+#add,
+#delete {
+  width: 5rem !important;
+  height: 2.3rem;
+}
+section .diller {
+  width: 13rem;
+}
+.red {
+  color: red;
+}
