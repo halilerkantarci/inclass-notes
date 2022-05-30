@@ -46,3 +46,29 @@ const javascriptKontrol = () => {
     }
   });
 };
+
+silBtn.onclick = function () {
+  ul.childElementCount > 0
+    ? ul.removeChild(ul.lastChild)
+    : alert("there is no data to delete");
+};
+
+//! entera basınca girdi olsun,delete e basınca silme olsun
+
+dilInput.addEventListener("keydown", (e) => {
+  if (e.keyCode === 13) {
+    ekleBtn.onclick();
+  }
+  if (e.code === "Delete") {
+    silBtn.onclick();
+  }
+});
+
+//* sayfa açılınca direkt inputa değer girebildik
+dilInput.focus();
+
+//! yukarıdaki ile aynı
+// window.onload = () => {
+//   javascriptKontrol();
+//   dilInput.focus();
+// };
