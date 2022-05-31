@@ -1,0 +1,44 @@
+:root {
+  --red: #dc3545;
+}
+
+/*! ---------------------- 1- NAVBAR ----------------------------- */
+/* .navbar-light {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgb(59, 59, 59);
+  transition: hover 3s;
+}*/
+/* .navbar-light .nav-link:hover {
+  color: var(--red);
+} */
+.navbar-light .navbar-nav .nav-link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 1s;
+  color: rgb(59, 56, 56);
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: rgb(59, 56, 56);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--red);
+}
+/*! ---------------------- 2- CAROUSEL ----------------------------- */
+.carousel-indicator/*! ------------------- 3- ABOUT SECTION ------------------------ */
+
+/*! ------------------- 4- INSTRUCTORS ------------------------ */
+
+/*! ------------------- 4- STUDENTS SECTION ------------------------ */
+
+/*! ------------------- 5- COURSES SECTION ------------------------ */
+
+/*! ------------------- 6- CONTACT SECTION ------------------------ */
+
+/** ------------------- UP-BUTTON --------------------- */
+
+/*! -------------------- 7- FOOTER ------------------------ */;
