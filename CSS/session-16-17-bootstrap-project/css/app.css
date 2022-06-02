@@ -74,7 +74,12 @@ section#instructors .card:hover {
 /*! ------------------- 4- STUDENTS SECTION ------------------------ */
 
 /*! ------------------- 5- COURSES SECTION ------------------------ */
-
+#courses .nav-link {
+  color: white;
+}
+#courses .nav-link.active {
+  background-color: var(--red) !important;
+}
 /*! ------------------- 6- CONTACT SECTION ------------------------ */
 
 /** ------------------- UP-BUTTON --------------------- */
