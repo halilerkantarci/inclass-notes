@@ -13,7 +13,7 @@ dilSection.appendChild(ul);
 console.log(dilSection.children[0]);
 console.log(dilSection.parentNode.parentNode.parentNode.parentNode);
 
-// ul den h1 e erişmek
+// ul den h1 e erişmenin kısa yolu. yukarıdaki gibi uzun uzun yazmıyoruz
 const h1 = ul.closest(".container").firstElementChild;
 console.log(h1);
 h1.style.color = "red";
@@ -41,7 +41,7 @@ const javascriptKontrol = () => {
     const kucukharf = dil.textContent.toLowerCase();
     if (kucukharf === "javascript") {
       //   dil.className = "red";
-      //! yukarıdaki kod ile aşşağıdaki aynı (eskiden olan classları siler,üzerine ekler)
+      //! yukarıdaki kod ile aşşağıdaki aynı (yukarıdaki eskiden olan classları siler,üzerine ekler)
       dil.setAttribute("class", "red");
     }
   });
@@ -56,8 +56,9 @@ silBtn.onclick = function () {
 //! entera basınca girdi olsun,delete e basınca silme olsun
 
 dilInput.addEventListener("keydown", (e) => {
+  //? Enter da yazabilirsin 13 de yazabilirsin
   if (e.keyCode === 13) {
-    ekleBtn.onclick();
+    ekleBtn.onclick(); //.click() de diyebilirsin
   }
   if (e.code === "Delete") {
     silBtn.onclick();
