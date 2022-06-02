@@ -20,16 +20,42 @@ productsDiv.addEventListener("click", (event) => {
   //alttakiyle üstteki aynı şey
   //! clas name dersek; o elementin tüm classları yazılmalı ("minus pls btn")
   if (event.target.className == "minus") {
-    event.target.nextElementSibling.innerText--;
+    let quantityP = event.target.nextElementSibling;
+    if (quantityP.innerText > 1) {
+      quantityP.innerText--;
+      calculateProductAndCartTotal();
+    } else {
+      if (confirm("Product will be deleted?")) {
+        event.target.parentElement.parentElement.parentElement.remove();
+        calculateCartTotal();
+      }
+    }
+
     // console.log("minus button clicked");
+
     //? classlist dersem o elementin tek bir classını yazmam yeterli
   } else if (event.target.classList.contains("plus")) {
-    console.log("plus button clicked");
+    event.target.previousElementSibling.innerText++;
+    calculateProductAndCartTotal();
+
+    // console.log("plus button clicked");
   } else if (event.target.classList.contains("remove-product")) {
-    console.log("remove button clicked");
+    event.target.parentElement.parentElement.parentElement.remove();
+    calculateCartTotal();
+
+    // console.log("remove button clicked");
   } else {
-    console.log("other clicks");
+    // console.log("other clicks");
   }
   // tıklanan elementi gösterir
   //   console.log(event.target);
 });
+
+//? ==================================
+//! CALCULATE CART AND PRODUCT TOTALS
+//* ==================================
+const calculateProductAndCartTotal = () => {
+  calculateCartTotal();
+};
+
+const calculateCartTotal = () => {};
