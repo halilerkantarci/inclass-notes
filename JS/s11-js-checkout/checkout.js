@@ -23,7 +23,9 @@ productsDiv.addEventListener("click", (event) => {
     let quantityP = event.target.nextElementSibling;
     if (quantityP.innerText > 1) {
       quantityP.innerText--;
-      calculateProductAndCartTotal();
+      // dedeye çıkmış olduk
+      // parameter == productInfoDiv
+      calculateProductAndCartTotal(event.target.parentElement.parentElement);
     } else {
       if (confirm("Product will be deleted?")) {
         event.target.parentElement.parentElement.parentElement.remove();
@@ -36,7 +38,8 @@ productsDiv.addEventListener("click", (event) => {
     //? classlist dersem o elementin tek bir classını yazmam yeterli
   } else if (event.target.classList.contains("plus")) {
     event.target.previousElementSibling.innerText++;
-    calculateProductAndCartTotal();
+    // parameter == productInfoDiv
+    calculateProductAndCartTotal(event.target.parentElement.parentElement);
 
     // console.log("plus button clicked");
   } else if (event.target.classList.contains("remove-product")) {
@@ -54,7 +57,9 @@ productsDiv.addEventListener("click", (event) => {
 //? ==================================
 //! CALCULATE CART AND PRODUCT TOTALS
 //* ==================================
-const calculateProductAndCartTotal = () => {
+const calculateProductAndCartTotal = (productInfoDiv) => {
+  let quantity = 
+  let price = 
   calculateCartTotal();
 };
 
