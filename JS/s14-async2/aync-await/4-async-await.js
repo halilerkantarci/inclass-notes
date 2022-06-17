@@ -11,26 +11,24 @@
 //* Bir async fonksiyon icerisinde await keyword'u ile yapilan istegin cevabinin
 //* beklenmesi saglanir.
 
-//* Aslinda dizilis olarak senkron mantiga benzeyen kod yazarak Asenkron
-//* kod yazmayı mumkun kilar.
+//! Aslinda dizilis olarak senkron mantiga benzeyen kod yazarak Asenkron
+//! kod yazmayı mumkun kilar.
 
 //* Await, promise-temelli herhangi bir fonksiyonun onune getirilerek getirildigi
 //* satirdaki kodun durudurulmasini saglar. Yapilan istek yerine getirilip sonuc
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
 
 //! YAZIMI ASENKRON,ÇALIŞMASI SENKRON GİBİ DÜŞÜNEBİLİRSİN
+const getUsers = async () => {
+  const res = await fetch("https://api.github.com/users");
+  if (!res.ok) {
+    throw new Error(`Something WENT WRONG!!!!: ${res.status}`);
+  }
+  const data = await res.json();
+  updateDom(data);
+};
 
-fetch("https://api.github.com/users")
-  .then((res) => {
-    if (!res.ok) {
-      //! serverdan cevap gelmezse catch e girer. 404 gibi hatalarda catch e girmez. o yüzden throw new error yazdık. böylece catche e girdi
-      throw new Error(`Something went wrong: ${res.status}`);
-    }
-    return res.json();
-  })
-  .then((data) => updateDom(data))
-
-  .catch((err) => console.log(err));
+getUsers();
 
 const updateDom = (data) => {
   const userDiv = document.querySelector(".users");
@@ -41,7 +39,7 @@ const updateDom = (data) => {
     userDiv.innerHTML += `
     <h2 class="text-warning">NAME:${login}</h2>
     <img src=${avatar_url} width="50%" alt="" />
-    <h3>HTML_URL:${user.html_url}</h3>
+    <h3>HTML_URL:${html_url}</h3>
   `;
   });
 };
