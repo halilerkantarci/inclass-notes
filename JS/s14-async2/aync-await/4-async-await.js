@@ -19,13 +19,21 @@
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
 
 //! YAZIMI ASENKRON,ÇALIŞMASI SENKRON GİBİ DÜŞÜNEBİLİRSİN
+
+let hata = false;
+
 const getUsers = async () => {
-  const res = await fetch("https://api.github.com/users");
-  if (!res.ok) {
-    throw new Error(`Something WENT WRONG!!!!: ${res.status}`);
+  try {
+    const res = await fetch("https://api.github.com/users");
+    if (!res.ok) {
+      hata = true;
+      // throw new Error(`Something WENT WRONG!!!!: ${res.status}`);
+    }
+    const data = await res.json();
+    updateDom(data);
+  } catch (error) {
+    console.log(error);
   }
-  const data = await res.json();
-  updateDom(data);
 };
 
 getUsers();
@@ -33,13 +41,18 @@ getUsers();
 const updateDom = (data) => {
   const userDiv = document.querySelector(".users");
 
-  data.forEach((user) => {
-    //! destructure
-    const { login, avatar_url, html_url } = user;
-    userDiv.innerHTML += `
+  if (hata) {
+    userDiv.innerHTML = `<h1 class="text-danger">Data can not be fetched</h1>
+    <img src="68674529551899935909208749f998525f2ebf13.jpeg" alt="">`;
+  } else {
+    data.forEach((user) => {
+      //! destructure
+      const { login, avatar_url, html_url } = user;
+      userDiv.innerHTML += `
     <h2 class="text-warning">NAME:${login}</h2>
     <img src=${avatar_url} width="50%" alt="" />
     <h3>HTML_URL:${html_url}</h3>
   `;
-  });
+    });
+  }
 };
