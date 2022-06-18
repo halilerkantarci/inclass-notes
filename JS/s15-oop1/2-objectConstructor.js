@@ -12,10 +12,10 @@
 // "B" büyük yazılarak,object olduğu ima edildi
 
 //! *********** ilk .js de her bir kitap için ayrı ayrı obje oluşturmam lazımdı. burada tek bir function yapıp obje halinde kullanarak bellekten yer kazanıyoruz //!**
-function Book(title, author, year) {
-  this.title = title;
-  this.author = author;
-  this.year = year;
+function Book(title1, author1, year1) {
+  this.title = title1;
+  this.author = author1;
+  this.year = year1;
   this.getSummary = function () {
     return `${this.title} was written by ${this.author} in ${this.year} `;
   };
@@ -72,3 +72,28 @@ console.log(Book.prototype);
 
 //!instance'larin proto alanini gormk icin .__proto__
 console.log(book1.__proto__);
+
+//? INHERITANCE (kalitim - ES-5)
+//? *******************************************************************
+
+//? SUB-CLASS
+function Magazine(title2, author2, year2, month1) {
+  //book objesini çağırdık
+  Book.call(this, title2, author2, year2);
+  // farklı olan özelliği de bu şekilde ekliyoruz
+  this.month = month1;
+}
+console.log(typeof Magazine);
+
+//! prototiple doğrudan miras olarak gelmez
+console.log(Magazine.prototype);
+
+//! PRORİTİPLERİ MİRAS ALMAK İÇİN OBJECT.CREATE() METODU KULANILABİLİR
+Magazine.prototype = Object.create(Book.prototype);
+console.log(Magazine.prototype);
+
+//! magazine nesnesinden bir instance oluşturulmalı
+
+const mag1 = new Magazine("scientific research", "einstein", 1905, "september");
+console.log(mag1);
+console.log(mag1.getAge());
